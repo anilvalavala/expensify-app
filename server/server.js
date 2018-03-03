@@ -11,7 +11,7 @@ const publicPath = path.join(__dirname, '../', 'public')
 //All such sorts of functionality is included in static function in express class
 app.use(express.static(publicPath));
 
-//This is similat to apiFallBack setting for dev-server
+//This is similat to historyApiFallBack setting for dev-server
 //Responisble to load pages if requested directly using url, instead of clicking on appropriate buttons
 app.get('*', (req, res) => {
     res.sendFile(path.join(publicPath, 'index.html'));
